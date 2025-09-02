@@ -1,0 +1,5 @@
+[theme]
+name=chicago95-modern
+description=A modern version Chicago95 lightdm theme
+engine=lightdm-webkit2-greeter
+url=index.html

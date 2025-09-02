@@ -1,0 +1,350 @@
+:root {
+    --background: #C0C0C0; 
+    --background-medium: #D4D0C8; 
+    --background-low: #A0A0A0; 
+    --background-lower: #808080; 
+    --foreground: black; 
+    --accent: #000080;
+    --grey: #808080;
+    --red: #800000;
+}
+
+
+@font-face {
+    font-family: 'feather';
+    src: url(../static/feather.ttf);
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Open Sans Variable';
+    src: url('../static/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-stretch: 75% 125%; 
+    font-display: swap;
+}
+
+body, * {
+    font-family: 'Open Sans Variable', sans-serif;
+}
+
+
+
+.drop-container {
+    display: none;
+    position: absolute;
+    font-size: 14px;
+    background-color: white;
+    border-color: var(--background-lower);
+    border-width: 2px;
+    border-style: solid;
+    min-width: 120px;
+    z-index: 100;
+    padding: 0;
+}
+
+.drop-container > div {
+    height: 32px;
+    line-height: 32px;
+    padding: 0 12px;
+    text-decoration: none;
+    z-index: 100;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: block;
+    text-align: start;
+}
+
+.drop-container.image > div {
+    padding-left: 40px;
+}
+
+.drop-container > div:hover {
+    background-color: var(--background-low);
+}
+
+body {
+    overflow: hidden;
+    -khtml-user-select: text;
+    user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+}
+
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background-color: #141414;
+    background-size: cover;
+}
+
+
+*::selection {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+#toast-container > div, #login-box, .ghost {
+    background-color: var(--background);
+}
+
+input:focus {
+    border-color: var(--accent);
+    border-radius: 0;
+}
+
+#name {
+    font-size: x-large;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+#avatar {
+    pointer-events: none;
+    width: 128px;
+    height: 128px;
+}
+
+.sm-avatar {
+    pointer-events: none;
+    max-width: 32px;
+    max-height: 32px;
+    position: absolute;
+    left: 0;
+}
+
+.show {display:block;}
+
+
+.xl-font {
+    font-size: large;
+}
+
+#login-box, #toast-container > div {
+    background-color: var(--background);
+    box-shadow: 2px 2px 0 var(--grey);
+    padding: 5px;
+}
+
+
+#content {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.iflex {
+    display: inline-flex;
+}
+
+#toast-container {
+    max-width: max-content;
+}
+
+#toast-container > div.err {
+    border-color: var(--red);
+}
+
+#powermenu {
+    left: 5px;
+    bottom: 35px;
+}
+
+#powermenu p {
+    line-height: 24px;
+}
+
+#session-list {
+    right: 7px;
+    bottom: 35px;
+}
+
+.bottom-drop {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: unset;
+    bottom: 32px;
+}
+
+.user-dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+#user-dropdown {
+    position: absolute;
+    top: 0px; 
+    left: 30px;
+    /* margin-top: 2px; */
+    z-index: 100;
+}
+
+
+
+/* ---- */
+
+#login-box {
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height: 425px;
+    width: 600px;
+    margin:auto;
+    position: absolute;
+    display: inline-block;
+    background: #c0c0c0;
+    padding: 2px 5px 2px 2px;
+    border-color: #c0c0c0 black black #c0c0c0; 
+    -webkit-box-shadow: inset -1px -1px 0px 0px rgba(128,128,128,1);
+    -moz-box-shadow: inset -1px -1px 0px 0px rgba(128,128,128,1);
+    box-shadow: inset -1px -1px 0px 0px rgba(128,128,128,1);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.title{
+  height:18px;
+  width:100%;
+  background:#000080;
+  color:#FFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.title-text{
+  float:left;
+  font-weight:bold;
+  font-size:11px;
+  color:#FFF;
+  margin-left: 2px;
+}
+
+.title-btns {
+    margin-right:2px;
+    display: flex;
+    flex-direction: row;
+}
+
+.title-btn {
+  background:#C0C0C0;
+  border-width:1px;
+  border-color:#FFFFFF #808080 #808080 #FFFFFF;
+  padding:0;
+  font-size:9px;
+  font-weight:bold;
+  text-align:center;
+  width: 13px;
+  height: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* ---- */
+
+img, a, input, select {
+    outline: none;
+    border-radius: 0;
+}
+
+.btn, select {
+    font-size: 10pt;
+    display: inline-block;
+    padding: 4px;
+    border-radius: 1px;
+    min-width: 30px;
+    height: 30px;
+    color: var(--foreground);
+    background: silver;
+    cursor: pointer;
+
+    border-style: outset;
+    border-width: 2px;
+    border-color: buttonface;
+    border-right-color: #424242;
+    border-bottom-color: #424242;
+
+    box-shadow: inset -1px -1px 0 var(--foreground), inset 1px 1px 0 var(--background-low);
+}
+
+.btn:hover, select:hover {
+    border: 2px inset #fff;
+    box-shadow: -1px -1px #000;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 6px center;
+    padding-right: 20px; /* место для стрелки */
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='10' viewBox='0 0 24 24' width='10' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+}
+
+.btn, input {
+    color: var(--foreground);
+    box-shadow: inset -1px -1px 0 var(--foreground), inset 1px 1px 0 var(--background-low);
+    border-radius: 0;
+} 
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    padding: 0 2px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.icon {
+    font-family: 'feather';
+    font-size: 13px;
+}
+
+
+#datetime-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+}
+
+#time {
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+#date {
+    font-size: 14px;
+    margin: 0;
+}

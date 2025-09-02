@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>chicago95-modern</title>
+    <script src="js/index.js"></script>
+    <script src="js/mock.js"></script>
+</head>
+
+<body>
+    <div id="toast-container"></div>
+
+    <div id="login-box">
+
+    <div class="title">
+      <p class="title-text">Enter login credentials</p>
+      <div class="title-btns">
+          <button class="title-btn">?</button>
+          <button class="title-btn">X</button>
+      </div>
+    </div>
+
+        <div id="datetime-block">
+            <div id="time" class="xl-font"></div>
+            <div id="date" class="xl-font"></div>
+        </div>
+
+        <form id="content" action="javascript: provide_secret();">
+
+            <img id="avatar" class="unselectable" />
+
+            <div>
+                <p id="name"></p>
+                <div class="user-dropdown-wrapper">
+                    <button class="btn xl-font icon" type="button" dropdown="user-dropdown">&#xe92e;</button>
+                    <div id="user-dropdown" class="drop-container image"></div>
+                </div>
+            </div>
+
+            <div id="l" class="drop-container image"></div>
+            
+            <div class="unselectable iflex">
+                <input type="password" placeholder="Password" id="password-box">
+                <button class="btn icon" id="login-btn" type="submit">
+                    &#xe9cd;
+                </button>
+            </div>
+
+        </form>
+
+        <div class="drop-container bottom-drop" id="powermenu"></div>
+        <div class="drop-container bottom-drop" id="session-list"></div>
+
+        <div class="footer">
+            <div class="footer-left">
+                <button class="btn icon" dropdown="powermenu">&#xe9c0;</button>
+                <p id="hostname"></p>
+            </div>
+            <div class="footer-center">
+                <p id="session"></p>
+                <button class="btn icon" dropdown="session-list">&#xe931;</button>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
