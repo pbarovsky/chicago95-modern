@@ -1,4 +1,4 @@
-# Evo
+# chicago95-modern
 
 Created based on [lightdm-evo](https://github.com/AlphaNecron/lightdm-evo)
 
